@@ -1,330 +1,217 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
 }
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
-body {
-    background-color: #000;
-    color: #fff;
-}
-
-.header {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./Assets/header-image.png);
-    background-size: cover;
-    background-position: center;
-    padding: 10px 8%;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.logo {
-    width: 150px;
-    cursor: pointer;
-}
-
-nav button {
-    border: none;
-    outline: none;
-    background-color: #db0001;
-    color: #fff;
-    padding: 7px 20px;
-    font-size: 12px;
-    border-radius: 4px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.lang-btn {
-    display: inline-flex;
-    align-items: center;
-    background: transparent;
-    border: 1px solid #fff;
-    padding: 7px 10px;
-}
-
-.lang-btn img {
-    width: 10px;
-    margin-left: 10px;
-} 
-
-.fa-globe {
-    color: #fff;
-    width: 10px;
-    margin-right: 10px;
-}
-
-.header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    margin-top: 100px;
-}
-
-.header-content h1 {
-    font-size: 60px;
-    line-height: 70px;
-    font-weight: 600;
-    max-width: 650px;
-}
-
-.header-content h3 {
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.email-signup {
-    background: #fff;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    overflow: hidden;
-}
-
-.email-signup input {
-    flex: 1;
-    border: 0;
-    outline: 0;
-    margin-left: 20px;
-}
-
-.email-signup button {
-    background-color: #db0001;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 15px 30px;
-}
-
-
-.features {
-    padding: 50px 12%;
-    font-size: 22px;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 50px 0;
-}
-
-.text-col, .img-col {
-    flex-basis: 50%;
-    margin-bottom: 20px;
-}
-
-.img-col img {
-    display: block;
-    width: 90%;
-    margin: auto;
-}
-
-.features h2 {
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.faq {
-    padding: 10px 12%;
-    text-align: center;
-    font-size: 18px;
-}
-
-.faq h2 {
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.accordion {
-    margin: 60px auto;
-    width: 100%;
-    max-width: 750px;
-}
-
-.accordion li {
-    list-style: none;
-    width: 100%;
-    padding: 5px;
-}
-
-.accordion li label {
-    display: flex;
-    align-items: center;
+ body{
+   font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    background-color: #303030;
-    margin-bottom: 2px;
-    cursor: pointer;
-    position: relative;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header { 
+  text-align: center;
+}
+.header h1 {
+  font-size: 2.5rem;
+  font-size: 700;
+  color: #4f46e5;
+  margin-bottom: 10px;
+} 
+.header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+.controls{
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.controls-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  .controls-container {
+    flex-direction: row;
+  }
+}
+.notes-grid {
+  display: flex;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768){
+  .notes-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px){
+  .notes-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.note-card{
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.note-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.note-card{
+  padding: 20px;
+}
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal{
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
 }
 
-label::after {
-    content: '+';
-    font-size: 34px;
-    position: absolute;
-    right: 20px;
-    transition: transform 0.5s;
+.modal-overlay.active .modal{
+  transform: translateY(0);
+}
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+.modal-title{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.modal-close{
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.modal-close:hover{
+  color: #666;
+}
+.modal-body{
+  padding: 20px;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+.form-label{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+.form-input{
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-input:focuss {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+.form-textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+.search-input{
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.search-input:focus{
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+.filter-group{
+  display: flex;
+  gap: 10px;
+}
+.filter-select{
+ padding: 12px 15px;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ font-size: 1rem;
+ background-color: white;
+ cursor: pointer;
+ transition: border-color 0.3s, box-shadow 0.3s;
+}
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeIn{
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-.accordion .content {
-    background-color: #303030;
-    text-align: left;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
-}
-
-.accordion input[type="radio"]:checked + label + .content {
-    max-height: 600px;
-    padding: 30px 20px;
-}
-
-.accordion input[type="radio"]:checked + label::after {
-    transform: rotate(135deg);
-}
-
-.faq small {
-    font-size: 13px;
-}
-
-.faq .email-signup {
-    max-width: 600px;
-    margin: 20px auto 60px;
-}
-
-
-.footer {
-    padding: 50px 15% 10px;
-    border-top: 6px solid #333;
-    color: #777;
-}
-
-.footer h2 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-.footer .col {
-    flex-basis: 25%;
-    flex-grow: 1;
-    margin-bottom: 20px;
-}
-
-.footer .col a {
-    display: block;
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
-
-.footer .row {
-    align-items: flex-start;
-    padding: 10px 0px;
-}
-
-.footer .lang-btn {
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 3px;
-}
-
-.copyright-text {
-    font-size: 14px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 
 
 
-@media only screen and (max-width: 600px) {
-    .logo {
-        width: 100px;
-    }
 
-    nav button {
-        padding: 5px 10px;
-    }
 
-    nav .lang-btn {
-        padding: 4px 8px;
-    }
 
-    .header-content {
-        position: unset;
-        transform: none;
-        padding-top: 150px;
-    }
 
-    .header-content h1 {
-        font-size: 30px;
-    }
 
-    .email-signup button {
-        font-size: 12px;
-        padding: 10px 15px;
-    }
 
-    .text-col, .img-col {
-        flex-basis: 100%;
-    }
 
-    .features h2 {
-        font-size: 30px;
-    }
 
-    .features p {
-        font-size: 15px;
-    }
 
-    .row:nth-child(2), .row:nth-child(4) {
-        flex-direction: column-reverse;
-    }
 
-    .features .row {
-        padding: 10px 0;
-    }
 
-    .faq h2 {
-        font-size: 20px;
-    }
 
-    .accordion .content {
-        font-size: 14px;
-    }
 
-    .accordion li label {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    label::after {
-        font-size: 22px;
-    }
-}

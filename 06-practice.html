@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  
+  , initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <button onclick="
+    pickComputerMove();
+
+
+    let result = '';
+    if (computerMove === 'rock'){
+      result ='Tie';
+    } else if (computerMove === 'paper'){
+      result = 'You win';
+    } else if (computerMove === 'scissors'){
+      result = 'You lose';
+    }
+    alert(`You picked Rock. Computer picked ${computerMove}. ${result}.`);
+    ">Rock</button>
+
+
+  <button onclick="
+  pickComputerMove();
+
+  let result = '';
+  if (computerMove === 'paper'){
+      result = 'Tie';
+    } else if (computerMove === 'scissors'){
+      result = 'You win';
+    } else if (computerMove === 'rock'){
+      result = 'You lose';
+    }
+  alert(`You picked Paper. Computer picked ${computerMove}. ${result}.`);
+">Paper</button>
+
+
+
+  <button onclick="
+  playGame('scissors');
+ ">Scissors</button>
+
+
+  <script>
+
+    function playGame(playerMove){
+      const computerMove= pickComputerMove();
+
+  let result = '';
+  if (playerMove === 'scissors'){
+    if (computerMove === 'scissors'){
+      result = 'Tie';
+    } else if (computerMove === 'paper'){
+      result = 'You win';
+    } else if (computerMove === 'rock'){
+      result = 'You lose';
+    }
+  }
+  
+  alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}.`);
+    }
+
+
+
+    let computerMove = '';
+     function pickComputerMove(){
+      const randomNumber = Math.random();
+      
+      if (randomNumber < 1/3){
+          computerMove = 'paper';
+        } else if (randomNumber >= 1 /3 && randomNumber < 2/3){
+          computerMove = 'scissors';
+        } else if (randomNumber >= 2/3 && randomNumber <=1){
+          computerMove = 'rock';
+        }
+        return computerMove;
+     }
+  </script>
+</body>
+</html>

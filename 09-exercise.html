@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Exercise</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-button">9b done!</button>
+  <button onclick=" document.querySelector('p')
+                .innerHTML = 'You chose head';" class="heads">heads</button>
+  <button onclick=" document.querySelector('p')
+                .innerHTML = 'You chose tail';" class="tails">tails</button>
+  <p></p>
+
+  <input type="text" placeholder="Name" class="my-name" onkeydown="
+   enterPresser(event);
+ ">
+  <button onclick="
+    nameDisplayerFunction();
+  " >Submit</button>
+  <p class="name-displayer"></p>
+  <script>
+    function enterPresser(event){
+      if (event.key === 'Enter'){
+   nameDisplayerFunction();
+  };
+    }
+
+
+
+    function nameDisplayerFunction(){
+      const inputElement = document.querySelector('.my-name');
+     const text = inputElement.value;
+    document.querySelector('.name-displayer').innerHTML = `Your name is ${text}`;
+    }
+
+
+
+
+
+    console.log(document.querySelector('button'));
+    console.log(document.querySelector('.js-button'));
+    
+
+    function display(){
+      const pg = document.querySelector('p');
+      if (pg.innerText === 'heads'){
+        pg.innerHTML = 'You chose head';
+      } else if (pg.innerText === 'tails'){
+        pg.innerHTML = 'You chose tail';
+      };
+    }
+
+  </script>
+</body>
+</html>
