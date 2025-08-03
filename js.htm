@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    button{
+      width: 80px;
+      height: 40px;
+      border-radius: 15px;
+      background-color: rgb(33, 124, 124);
+    }
+  </style>
+</head>
+<body>
+  <h1>A web page</h1>
+  <p id="demo"> The first paragraph in this code that will run js codes</p>
+  <button type="button" onclick="myFunction()">Try it</button>
+
+  <script>
+    function myFunction() {
+      document.getElementById('demo').innerHTML="Am just trying out js codes.";
+    }
+  </script>
+  <h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="dems"></p>
+
+<script>
+document.getElementById("dems").innerHTML = 5 + 6;
+console.log(4 + 3);
+</script>
+
+
+<h1>My second Web Page</h1>
+<p>My 2nd paragraph.</p>
+
+<script>
+document.write(9 + 6);
+
+
+</script>
+<button type="button" onclick="document.write(8 + 6)">Try it</button>
+<button onclick="window.print()">Print this page</button>
+
+<p id="demo2" >So let's continue our js learning</p>
+<button  type="button" onclick="MyFunction()">Try it again</button>
+<script>
+function MyFunction(){
+document.getElementById("demo2").innerHTML = " What do you do at times ";
+}
+
+</script>
+<p id="demo3">Practice makes perfect they say</p>
+<button   onclick="myFunction2()">click</button>
+<script>
+function myFunction2(){
+document.getElementById('demo3').innerHTML = 'May Allah Azawajal make it easy for us all';
+}
+</script>
+</body>
+</html>

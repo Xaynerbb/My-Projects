@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box</title>
+  <style>
+    .email,
+    .last,
+    .first{
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 2px 4px 5px rgb(171, 171, 245);
+      color: darkslategray;
+      background-color: rgb(228, 191, 230);
+      border: none;
+      
+    }
+.email{
+  display: block;
+}
+.button{
+  color: white;
+padding: 10px;
+height: 40px;
+width: 40%;
+font-weight: bold;
+border-radius: 5px;
+border: none;
+box-shadow: 4px 4px 20px black;
+cursor: pointer;
+}
+.button:hover;{
+  opacity: 0.7
+}
+.button:active{
+ opacity: 0.7;
+  
+  
+}
+  </style>
+</head>
+<body>
+  <div>
+    <input class="first" type="alphabets" placeholder="First name"> 
+    <input class="last"  type="text" placeholder="Last name"> 
+    <input class="email" type="alphabets" placeholder="Email"> 
+    <button class="button">Sign-Up</button>
+  </div>
+</body>
+</html>
